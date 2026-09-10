@@ -28,7 +28,7 @@ def on_move(event):
             continue
         action_ax = list_axes[action_ind]
         if checking_ax.button_pressed in checking_ax._rotate_btn:
-            action_ax.view_init(elev=checking_ax.elev, azim=checking_ax.azim)
+            action_ax.view_init(elev=checking_ax.elev, azim=checking_ax.azim, roll=checking_ax.roll)
             adjustment_made = True
         elif checking_ax.button_pressed in checking_ax._zoom_btn:
             action_ax.set_xlim3d(checking_ax.get_xlim3d())
